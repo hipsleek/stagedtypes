@@ -467,11 +467,11 @@ Definition t_heap_and_pure (H:hprop) (P:tpure) : tprop :=
                              /\ Fmap.disjoint h1 h2
                              /\ h = h1 \u h2.
 
-Definition tprop_and (T1 T2: tprop) : tprop := 
+(* Definition tprop_and (T1 T2: tprop) : tprop :=
     fun h => exists h1 h2 h3, T1 (h1 \* h3)
                              /\ T2 (h2 \* h3)
                              /\ Fmap.disjoint h1 h2
-                             /\ h = h1 \u h2 \u h3.
+                             /\ h = h1 \u h2 \u h3. *)
 
 Theorem not_exists_iff_forall_not :
       (forall (A : Type) (P : A -> Prop), ~ (exists x, P x) <-> (forall x, ~ P x)).
